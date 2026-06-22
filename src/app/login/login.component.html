@@ -1,0 +1,33 @@
+<div class="login-page">
+  <section class="welcome">
+    <div class="welcome-content">
+      <mat-icon>local_library</mat-icon>
+      <h1>Bibliothèque</h1>
+      <p>Gérez simplement vos livres, lecteurs et opérations d'emprunt.</p>
+    </div>
+  </section>
+  <section class="login-panel">
+    <form (ngSubmit)="submit()">
+      <div class="mobile-brand"><mat-icon>local_library</mat-icon> BiblioGest</div>
+      <h2>Connexion</h2>
+      <p class="subtitle">Accédez à votre espace d'administration</p>
+      <mat-form-field appearance="outline">
+        <mat-label>Adresse e-mail</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="email" required>
+        <mat-icon matSuffix>mail</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="password" required>
+        <button mat-icon-button matSuffix type="button" (click)="hide = !hide"><mat-icon>{{ hide ? 'visibility' : 'visibility_off' }}</mat-icon></button>
+      </mat-form-field>
+      <p class="error" *ngIf="error">{{ error }}</p>
+      <button mat-flat-button color="primary" class="submit" type="submit">Se connecter</button>
+      <div class="demo-accounts">
+        <strong>Comptes de démonstration</strong>
+        <span>Admin : admin@biblio.tn / admin</span>
+        <span>User : user@biblio.tn / user</span>
+      </div>
+    </form>
+  </section>
+</div>

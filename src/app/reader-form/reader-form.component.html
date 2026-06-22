@@ -1,0 +1,8 @@
+<div class="page-heading"><div><h1>{{ idcourant ? 'Modifier le lecteur' : 'Nouveau lecteur' }}</h1><p>Informations personnelles et coordonnées</p></div></div>
+<mat-card class="form-card"><form *ngIf="form" [formGroup]="form" (ngSubmit)="sub()"><div class="form-grid">
+  <mat-form-field appearance="outline"><mat-label>Prénom</mat-label><input matInput formControlName="firstName"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Nom</mat-label><input matInput formControlName="lastName"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Adresse e-mail</mat-label><input matInput type="email" formControlName="email"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Téléphone</mat-label><input matInput formControlName="phone"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Date d'inscription</mat-label><input matInput type="date" formControlName="registrationDate"></mat-form-field>
+</div><div class="form-actions"><a mat-button routerLink="/readers">Annuler</a><button mat-flat-button color="primary" type="submit"><mat-icon>save</mat-icon>Enregistrer</button></div></form></mat-card>

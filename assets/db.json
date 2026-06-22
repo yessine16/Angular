@@ -1,0 +1,154 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "isbn": "978-2070360024",
+      "title": "L'Étranger",
+      "author": "Albert Camus",
+      "category": "Roman",
+      "publicationYear": 1942,
+      "quantity": 5,
+      "available": 3
+    },
+    {
+      "id": "2",
+      "isbn": "978-2100808496",
+      "title": "Algorithmique",
+      "author": "Thomas Cormen",
+      "category": "Informatique",
+      "publicationYear": 2020,
+      "quantity": 3,
+      "available": 2
+    },
+    {
+      "id": "3",
+      "isbn": "978-2266283028",
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "category": "Histoire",
+      "publicationYear": 2015,
+      "quantity": 4,
+      "available": 3
+    },
+    {
+      "id": "4",
+      "isbn": "978-2070612758",
+      "title": "Le Petit Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "category": "Jeunesse",
+      "publicationYear": 1943,
+      "quantity": 6,
+      "available": 5
+    },
+    {
+      "id": "5",
+      "isbn": "978-2212567592",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Informatique",
+      "publicationYear": 2008,
+      "quantity": 2,
+      "available": 0
+    },
+    {
+      "isbn": "000",
+      "title": "000",
+      "author": "0000",
+      "category": "Histoire",
+      "publicationYear": 2026,
+      "quantity": 2,
+      "available": 2,
+      "id": "Xk4SCai1mfM"
+    }
+  ],
+  "readers": [
+    {
+      "id": "1",
+      "firstName": "Amira",
+      "lastName": "Ben Salah",
+      "email": "amira@example.com",
+      "phone": "22 145 870",
+      "registrationDate": "2026-01-12"
+    },
+    {
+      "id": "2",
+      "firstName": "Mohamed",
+      "lastName": "Trabelsi",
+      "email": "mohamed@example.com",
+      "phone": "55 482 110",
+      "registrationDate": "2026-02-03"
+    },
+    {
+      "id": "3",
+      "firstName": "Sarra",
+      "lastName": "Mansour",
+      "email": "sarra@example.com",
+      "phone": "29 635 420",
+      "registrationDate": "2026-03-21"
+    },
+    {
+      "id": "4",
+      "firstName": "Youssef",
+      "lastName": "Gharbi",
+      "email": "youssef@example.com",
+      "phone": "98 712 305",
+      "registrationDate": "2026-04-08"
+    },
+    {
+      "firstName": "Yessine",
+      "lastName": "Chaabene",
+      "email": "yessinchaaben4@gmail.com",
+      "phone": "54353312",
+      "registrationDate": "2026-06-22",
+      "id": "H9wB5KYkjQY"
+    }
+  ],
+  "borrowings": [
+    {
+      "id": "1",
+      "bookId": 1,
+      "readerId": 1,
+      "borrowDate": "2026-06-08",
+      "dueDate": "2026-06-22",
+      "status": "En cours"
+    },
+    {
+      "id": "2",
+      "bookId": 2,
+      "readerId": 2,
+      "borrowDate": "2026-06-01",
+      "dueDate": "2026-06-15",
+      "status": "En retard"
+    },
+    {
+      "id": "3",
+      "bookId": 4,
+      "readerId": 3,
+      "borrowDate": "2026-05-10",
+      "dueDate": "2026-05-24",
+      "returnDate": "2026-05-23",
+      "status": "Retourné"
+    },
+    {
+      "bookId": 3,
+      "readerId": 4,
+      "borrowDate": "2026-06-19",
+      "dueDate": "2026-07-03",
+      "status": "En cours",
+      "id": "x3uEUrB_dwI"
+    }
+  ],
+  "bookRequests": [
+    {
+      "id": "1",
+      "bookId": 3,
+      "readerId": 4,
+      "requesterEmail": "user@biblio.tn",
+      "requestDate": "2026-06-19",
+      "note": "Je souhaite consulter ce livre pendant les vacances.",
+      "status": "Approuvée",
+      "decisionDate": "2026-06-19"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

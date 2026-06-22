@@ -1,0 +1,13 @@
+<div class="page-heading"><div><h1>{{ idcourant ? 'Modifier le livre' : 'Nouveau livre' }}</h1><p>Renseignez les informations bibliographiques et le stock</p></div></div>
+<mat-card class="form-card"><form *ngIf="form" [formGroup]="form" (ngSubmit)="sub()">
+  <div class="form-grid">
+    <mat-form-field appearance="outline"><mat-label>ISBN</mat-label><input matInput formControlName="isbn"></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Titre</mat-label><input matInput formControlName="title"></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Auteur</mat-label><input matInput formControlName="author"></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Catégorie</mat-label><mat-select formControlName="category"><mat-option *ngFor="let x of categories" [value]="x">{{ x }}</mat-option></mat-select></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Année de publication</mat-label><input matInput type="number" formControlName="publicationYear"></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Nombre d'exemplaires</mat-label><input matInput type="number" formControlName="quantity"></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Exemplaires disponibles</mat-label><input matInput type="number" formControlName="available"></mat-form-field>
+  </div>
+  <div class="form-actions"><a mat-button routerLink="/books">Annuler</a><button mat-flat-button color="primary" type="submit"><mat-icon>save</mat-icon>Enregistrer</button></div>
+</form></mat-card>

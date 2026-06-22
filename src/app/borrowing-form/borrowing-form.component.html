@@ -1,0 +1,10 @@
+<div class="page-heading"><div><h1>{{ idcourant ? 'Modifier l’emprunt' : 'Nouvel emprunt' }}</h1><p>Affectez un livre à un lecteur et définissez la date de retour</p></div></div>
+<mat-card class="form-card"><form *ngIf="form" [formGroup]="form" (ngSubmit)="sub()"><div class="form-grid">
+  <mat-form-field appearance="outline"><mat-label>Livre</mat-label><mat-select formControlName="bookId"><mat-option *ngFor="let x of books" [value]="x.id" [disabled]="!idcourant && x.available === 0">{{ x.title }} ({{ x.available }} disponible(s))</mat-option></mat-select></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Lecteur</mat-label><mat-select formControlName="readerId"><mat-option *ngFor="let x of readers" [value]="x.id">{{ x.firstName }} {{ x.lastName }}</mat-option></mat-select></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Date d'emprunt</mat-label><input matInput type="date" formControlName="borrowDate"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Date de retour prévue</mat-label><input matInput type="date" formControlName="dueDate"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Date de retour effective</mat-label><input matInput type="date" formControlName="returnDate"></mat-form-field>
+  <mat-form-field appearance="outline"><mat-label>Statut calculé</mat-label><input matInput [value]="form.value.returnDate ? 'Retourné' : 'Calculé selon la date prévue'" readonly></mat-form-field>
+</div><div class="form-actions"><a mat-button routerLink="/borrowings">Annuler</a><button mat-flat-button color="primary" type="submit" [disabled]="saving"><mat-icon>save</mat-icon>{{ saving ? 'Enregistrement...' : 'Enregistrer' }}</button></div></form></mat-card>
+

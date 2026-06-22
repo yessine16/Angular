@@ -1,0 +1,12 @@
+<div class="page-heading"><div><h1>Tableau de bord</h1><p>Vue générale de l'activité de la bibliothèque</p></div></div>
+<section class="stats">
+  <mat-card><mat-icon>menu_book</mat-icon><div><span>Livres</span><strong>{{ books }}</strong></div></mat-card>
+  <mat-card><mat-icon>groups</mat-icon><div><span>Lecteurs</span><strong>{{ readers }}</strong></div></mat-card>
+  <mat-card><mat-icon>swap_horiz</mat-icon><div><span>Emprunts actifs</span><strong>{{ active }}</strong></div></mat-card>
+  <mat-card class="danger"><mat-icon>warning</mat-icon><div><span>En retard</span><strong>{{ late }}</strong></div></mat-card>
+  <mat-card><mat-icon>library_add</mat-icon><div><span>Demandes en attente</span><strong>{{ pendingRequests }}</strong></div></mat-card>
+</section>
+<section class="charts">
+  <mat-card><h2>Disponibilité des exemplaires</h2><div class="chart"><canvas baseChart [data]="doughnut" [type]="'doughnut'"></canvas></div></mat-card>
+  <mat-card><h2>Livres par catégorie</h2><div class="chart"><canvas baseChart [data]="bar" [type]="'bar'"></canvas></div></mat-card>
+</section>

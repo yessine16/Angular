@@ -1,0 +1,37 @@
+<div class="page-heading">
+  <div>
+    <h1>Demander un livre</h1>
+    <p>Choisissez un ouvrage disponible et envoyez votre demande</p>
+  </div>
+</div>
+
+<mat-card class="form-card">
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="sub()">
+    <div class="form-grid">
+      <mat-form-field appearance="outline">
+        <mat-label>Livre disponible</mat-label>
+        <mat-select formControlName="bookId">
+          <mat-option *ngFor="let book of books" [value]="book.id">
+            {{ book.title }} - {{ book.author }} ({{ book.available }} disponible(s))
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Note facultative</mat-label>
+        <textarea matInput formControlName="note" rows="4" maxlength="250"></textarea>
+        <mat-hint align="end">{{ form.value.note?.length || 0 }}/250</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <p class="empty-message" *ngIf="books.length === 0">Aucun nouveau livre ne peut être demandé : indisponible ou demande déjà en attente.</p>
+
+    <div class="form-actions">
+      <a mat-button routerLink="/requests">Annuler</a>
+      <button mat-flat-button color="primary" type="submit" [disabled]="saving || books.length === 0">
+        <mat-icon>send</mat-icon>{{ saving ? 'Envoi...' : 'Envoyer la demande' }}
+      </button>
+    </div>
+  </form>
+</mat-card>
+

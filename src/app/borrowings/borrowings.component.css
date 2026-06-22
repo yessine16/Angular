@@ -1,0 +1,4 @@
+@import '../shared-table.css';
+.status { display: inline-block; padding: 5px 9px; border-radius: 4px; background: #fff0cf; color: #805b12; font-size: 12px; font-weight: 700; }
+.status.late { background: #fee4e2; color: #b42318; }
+.status.returned { background: #dff3eb; color: #166b57; }

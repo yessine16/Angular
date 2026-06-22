@@ -1,0 +1,15 @@
+@import '../shared-table.css';
+.request-status { display: inline-block; padding: 5px 9px; border-radius: 4px; background: #fff0cf; color: #805b12; font-size: 12px; font-weight: 700; }
+.request-status.approved { background: #dff3eb; color: #166b57; }
+.request-status.rejected { background: #fee4e2; color: #b42318; }
+.request-status.cancelled { background: #e9edf0; color: #52616c; }
+.actions { white-space: nowrap; }
+.empty-state { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 42px; color: #71808c; }
+
+.request-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 18px; }
+.request-summary div { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: white; border: 1px solid #e3e9ed; border-radius: 6px; }
+.request-summary span { color: #71808c; font-size: 13px; }
+.request-summary strong { color: #17324d; font-size: 22px; }
+.status-filter { width: 190px !important; }
+@media (max-width: 700px) { .request-summary { grid-template-columns: repeat(2, 1fr); } }
+

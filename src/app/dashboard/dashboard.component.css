@@ -1,0 +1,13 @@
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px; margin-bottom: 22px; }
+.stats mat-card { display: flex; align-items: center; gap: 16px; padding: 22px; border-left: 4px solid #2a5678; }
+.stats mat-icon { width: 44px; height: 44px; font-size: 44px; color: #2a5678; }
+.stats span, .stats strong { display: block; }
+.stats span { color: #71808c; font-size: 13px; }
+.stats strong { color: #17324d; font-size: 28px; margin-top: 5px; }
+.stats .danger { border-color: #b42318; } .stats .danger mat-icon { color: #b42318; }
+.charts { display: grid; grid-template-columns: 1fr 1.6fr; gap: 20px; }
+.charts mat-card { min-width: 0; padding: 22px; overflow: hidden; } h2 { font-size: 17px; color: #243746; margin: 0 0 18px; }
+.chart { width: 100%; height: 280px; position: relative; overflow: hidden; }
+.chart canvas { max-width: 100% !important; }
+@media (max-width: 1050px) { .stats { grid-template-columns: repeat(2, 1fr); } .charts { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .stats { grid-template-columns: 1fr; } }

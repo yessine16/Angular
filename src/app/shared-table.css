@@ -1,0 +1,12 @@
+.table-card { padding: 0; overflow: hidden; }
+.table-tools { padding: 18px 20px 0; }
+.table-tools mat-form-field { width: min(390px, 100%); }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; }
+th { color: #52616c; font-weight: 700; }
+td, th { padding-left: 18px !important; padding-right: 18px !important; }
+.tag { display: inline-block; padding: 4px 9px; background: #e7f0f5; color: #2a5678; border-radius: 4px; font-size: 12px; }
+.low { color: #b42318; font-weight: 700; }
+.relation-list { display: grid; gap: 4px; min-width: 150px; padding: 8px 0; }
+.relation-list span { display: block; padding-left: 10px; border-left: 3px solid #2f7d6d; color: #334f5f; font-size: 12px; }
+.empty-relation { color: #8b98a2; font-size: 12px; font-style: italic; }
