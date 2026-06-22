@@ -5,9 +5,9 @@
       <div><strong>BiblioGest</strong><span>Gestion de bibliothèque</span></div>
     </div>
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard" routerLinkActive="active"><mat-icon>dashboard</mat-icon><span>Tableau de bord</span></a>
-      <a mat-list-item routerLink="/books" routerLinkActive="active"><mat-icon>menu_book</mat-icon><span>Livres</span></a>
-      <a mat-list-item routerLink="/readers" routerLinkActive="active"><mat-icon>groups</mat-icon><span>Lecteurs</span></a>
+      <a *ngIf="auth.isAdmin()" mat-list-item routerLink="/dashboard" routerLinkActive="active"><mat-icon>dashboard</mat-icon><span>Tableau de bord</span></a>
+      <a *ngIf="auth.isAdmin()" mat-list-item routerLink="/books" routerLinkActive="active"><mat-icon>menu_book</mat-icon><span>Livres</span></a>
+      <a *ngIf="auth.isAdmin()" mat-list-item routerLink="/readers" routerLinkActive="active"><mat-icon>groups</mat-icon><span>Lecteurs</span></a>
       <a mat-list-item routerLink="/borrowings" routerLinkActive="active"><mat-icon>swap_horiz</mat-icon><span>Emprunts</span></a>
       <a mat-list-item routerLink="/requests" routerLinkActive="active"><mat-icon>library_add</mat-icon><span>Demandes</span></a>
     </mat-nav-list>

@@ -17,7 +17,11 @@ export class LoginComponent {
 
   submit() {
     if (this.auth.login(this.email.trim(), this.password)) {
-      this.router.navigate(['/dashboard']);
+      if (this.auth.isAdmin()) {
+        this.router.navigate(['/dashboard']);
+      } else {
+        this.router.navigate(['/borrowings']);
+      }
     } else {
       this.error = 'Adresse e-mail ou mot de passe incorrect.';
     }

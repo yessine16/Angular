@@ -10,7 +10,7 @@ export const authGuard: CanActivateFn = () => {
 export const adminGuard: CanActivateFn = () => {
   const auth = inject(AuthService);
   if (!auth.isAuthenticated()) return inject(Router).createUrlTree(['/login']);
-  return auth.isAdmin() ? true : inject(Router).createUrlTree(['/dashboard']);
+  return auth.isAdmin() ? true : inject(Router).createUrlTree(['/borrowings']);
 };
 
 export const userGuard: CanActivateFn = () => {
